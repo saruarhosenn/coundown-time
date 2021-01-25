@@ -48,44 +48,30 @@
       </div>
     </div>
 
-  <script src="js/yscountdown.min.js"></script>
-  
-
-  <script>
-
-    var daysElement = document.querySelector("#days");
-    var hoursElement = document.querySelector("#hours");
-    var minutesElement = document.querySelector("#minutes");
-    var secondsElement = document.querySelector("#seconds");
-    var containerElement = document.querySelector(".main");
-    var endDate = "2020/09/21";
-
-    var myCountDown = new ysCountDown(endDate, function (remaining, finished) {
-
-      if (finished) {
-        containerElement.textContent = "Expired";
-      }
-      
-      daysElement.textContent = remaining.totalDays;
-      hoursElement.textContent = remaining.hours;
-      minutesElement.textContent = remaining.minutes;
-      secondsElement.textContent = remaining.seconds;
-
-    });
-
-  </script>
-
-
-
+    <script src="js/yscountdown.min.js"></script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js"></script>
-
-
-
     <script src="js/main.js"></script>
+    <script>
+		var daysElement = document.querySelector("#days");
+		var hoursElement = document.querySelector("#hours");
+		var minutesElement = document.querySelector("#minutes");
+		var secondsElement = document.querySelector("#seconds");
+		var containerElement = document.querySelector(".main");
+		var endDate = "2021/09/29";
+		var myCountDown = new ysCountDown(endDate, function(remaining, finished) {
+			if (finished) {
+				containerElement.textContent = "Expired";
+			}
+			daysElement.textContent = remaining.totalDays;
+			hoursElement.textContent = remaining.hours;
+			minutesElement.textContent = remaining.minutes;
+			secondsElement.textContent = remaining.seconds;
+		});
 
+	</script>
   </body>
 </html>
